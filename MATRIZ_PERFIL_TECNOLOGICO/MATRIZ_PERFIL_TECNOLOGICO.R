@@ -85,7 +85,7 @@ if(!"Application Id" %in% names(df_rango_3)) {
 
 # Función para separar los códigos IPC en columnas y mantener las otras columnas
 separar_codigos <- function(df) {
-  # Separar los códigos IPC en filas
+  # Separar los códigos IPC en columnas
   df_codigos <- df %>%
     separate_rows(`I P C`, sep = ";") %>%
     mutate(`I P C` = str_trim(`I P C`))
